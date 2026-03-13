@@ -85,6 +85,10 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "camera.h",
@@ -92,14 +96,10 @@
               "RelativeDocumentMoniker": "PathTracer\\camera.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\camera.h",
               "RelativeToolTip": "PathTracer\\camera.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-13T09:54:17.534Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -205,7 +205,7 @@
               "RelativeDocumentMoniker": "PathTracer\\main.cpp",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\main.cpp",
               "RelativeToolTip": "PathTracer\\main.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAABIAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-12T13:24:47.923Z",
               "EditorCaption": ""

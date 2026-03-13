@@ -3,6 +3,8 @@
 #include "vec3.h"
 #include <cmath>
 
+const double pi = 3.1415926535897932385;
+
 class camera
 {
 public:
@@ -15,13 +17,13 @@ public:
     camera(
         double vfov,        // vertical field-of-view
         double aspect_ratio,
-        vec3 lookfrom,
-        vec3 lookat,
-        vec3 vup
+        vec3 lookfrom,  // 相机位置
+        vec3 lookat,    // 观察目标
+        vec3 vup    // 上方向
     )
     {
         // 角度 → 弧度
-        double theta = vfov * M_PI / 180.0;
+        double theta = vfov * pi / 180.0;
 
         // viewport高度
         double h = tan(theta / 2);

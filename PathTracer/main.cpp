@@ -72,20 +72,13 @@ int main()
     world.add(&s5);
 
     // Camera
-    double viewport_height = 2.0;
-    double viewport_width = aspect_ratio * viewport_height;
-    double focal_length = 1.0;
+    vec3 lookfrom(0, 0, 0);
+    vec3 lookat(0, 0, -1);
+    vec3 vup(0, 1, 0);
 
-    vec3 origin(0, 0, 0);
+    double vfov = 90; // 120£º¹ã½Ç
 
-    vec3 horizontal(viewport_width, 0, 0);
-    vec3 vertical(0, viewport_height, 0);
-
-    vec3 lower_left_corner =
-        origin
-        - horizontal / 2
-        - vertical / 2
-        - vec3(0, 0, focal_length);
+    camera cam(vfov, aspect_ratio, lookfrom, lookat, vup);
 
     for (int j = image_height - 1;j >= 0;--j)
     {
@@ -98,13 +91,7 @@ int main()
                 double u = (i + random_double()) / (image_width - 1);
                 double v = (j + random_double()) / (image_height - 1);
 
-                vec3 direction =
-                    lower_left_corner +
-                    horizontal * u +
-                    vertical * v -
-                    origin;
-
-                ray r(origin, direction);
+                ray r = cam.get_ray(u, v);
 
                 pixel_color = pixel_color + ray_color(r, world, 10);
             }
