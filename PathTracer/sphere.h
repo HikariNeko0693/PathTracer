@@ -1,17 +1,23 @@
 #pragma once
 #include "hittable.h"
+#include <memory>
 
 class sphere : public hittable
 {
 public:
 
     vec3 center;
-    double radius;
-    material* mat_ptr;
+    double radius = 0;
+    std::shared_ptr<material> mat_ptr;
 
     sphere() {}
-    sphere(vec3 c, double r, material* m)
-        :center(c), radius(r), mat_ptr(m) {
+
+    sphere(
+        vec3 c,
+        double r,
+        std::shared_ptr<material> m
+    )
+        : center(c), radius(r), mat_ptr(m) {
     }
 
     virtual bool hit(
@@ -35,10 +41,11 @@ public:
 
         auto root = (-half_b - sqrtd) / a;
 
-        if (root<t_min || root>t_max)
+        if (root < t_min || root > t_max)
         {
             root = (-half_b + sqrtd) / a;
-            if (root<t_min || root>t_max)
+
+            if (root < t_min || root > t_max)
                 return false;
         }
 

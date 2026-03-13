@@ -6,11 +6,11 @@ class material;
 struct hit_record {
     vec3 p;
     vec3 normal;
-    material* mat_ptr;
+    std::shared_ptr<material> mat_ptr;
 
-    double t;
+    double t = 0.0;
 
-    bool front_face;
+    bool front_face = true;
 
     // 修正法线方向
     void set_face_normal(const ray& r, const vec3& outward_normal)
