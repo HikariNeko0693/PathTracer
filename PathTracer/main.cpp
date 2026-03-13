@@ -72,13 +72,23 @@ int main()
     world.add(&s5);
 
     // Camera
-    vec3 lookfrom(0, 0, 0);
+    vec3 lookfrom(3, 3, 3);
     vec3 lookat(0, 0, -1);
     vec3 vup(0, 1, 0);
 
     double vfov = 90; // 120£º¹ã½Ç
+    double aperture = 0.5;
+    double focus_dist = (lookfrom - lookat).length();
 
-    camera cam(vfov, aspect_ratio, lookfrom, lookat, vup);
+    camera cam(
+        vfov,
+        aspect_ratio,
+        lookfrom,
+        lookat,
+        vup,
+        aperture,
+        focus_dist
+    );
 
     for (int j = image_height - 1;j >= 0;--j)
     {

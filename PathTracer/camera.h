@@ -14,12 +14,17 @@ public:
     vec3 horizontal;
     vec3 vertical;
 
+    vec3 u, v, w;
+    double lens_radius;
+
     camera(
         double vfov,        // vertical field-of-view
         double aspect_ratio,
         vec3 lookfrom,  // 相机位置
         vec3 lookat,    // 观察目标
-        vec3 vup    // 上方向
+        vec3 vup,    // 上方向
+        double aperture,
+        double focus_dist
     )
     {
         // 角度 → 弧度
@@ -38,21 +43,27 @@ public:
 
         origin = lookfrom;
 
-        horizontal = viewport_width * u;
-        vertical = viewport_height * v;
+        horizontal = focus_dist * viewport_width * u;
+        vertical = focus_dist * viewport_height * v;
 
         lower_left_corner =
             origin
             - horizontal / 2
             - vertical / 2
-            - w;
+            - focus_dist * w;
+
+        lens_radius = aperture / 2;
     }
 
+    // 光线不再从 origin 发射, 而是从镜头圆盘随机位置发射
     ray get_ray(double s, double t) const
     {
+        vec3 rd = lens_radius * random_in_unit_disk();
+        vec3 offset = u * rd.x() + v * rd.y();
+
         return ray(
-            origin,
-            lower_left_corner + s * horizontal + t * vertical - origin
+            origin + offset,
+            lower_left_corner + s * horizontal + t * vertical - origin - offset
         );
     }
 };

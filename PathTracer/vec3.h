@@ -164,3 +164,20 @@ inline vec3 refract(const vec3& uv, const vec3& n, double etai_over_etat)
 
     return r_out_perp + r_out_parallel;
 }
+
+// 在单位圆盘中随机采样（用于镜头采样）
+inline vec3 random_in_unit_disk()
+{
+    while (true)
+    {
+        vec3 p(
+            random_double() * 2 - 1,
+            random_double() * 2 - 1,
+            0
+        );
+
+        if (p.length_squared() >= 1) continue;
+
+        return p;
+    }
+}
