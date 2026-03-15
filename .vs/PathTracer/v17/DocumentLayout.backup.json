@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Games101\\RayTracing\\PathTracer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\sphere.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -15,44 +15,52 @@
       "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\rtweekend.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\hittable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\hittable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\hittable_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\hittable_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\vec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\dielectric.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\dielectric.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\ray.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\ray.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\metal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\metal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\lambertian.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\lambertian.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\material.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\material.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\ray.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\ray.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\lambertian.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\lambertian.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\hittable_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\hittable_list.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\hittable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\hittable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\dielectric.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\dielectric.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\color.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\color.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\bvh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\bvh.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\aabb.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FD5AEB29-8913-454C-8F78-8063487757E2}|PathTracer\\PathTracer.vcxproj|solutionrelative:PathTracer\\aabb.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,8 +70,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 20,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ray.h",
+              "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\ray.h",
+              "RelativeDocumentMoniker": "PathTracer\\ray.h",
+              "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\ray.h",
+              "RelativeToolTip": "PathTracer\\ray.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-12T13:23:16.399Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -90,13 +111,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
+              "Title": "bvh.h",
+              "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\bvh.h",
+              "RelativeDocumentMoniker": "PathTracer\\bvh.h",
+              "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\bvh.h",
+              "RelativeToolTip": "PathTracer\\bvh.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-15T06:54:54.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "aabb.h",
+              "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\aabb.h",
+              "RelativeDocumentMoniker": "PathTracer\\aabb.h",
+              "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\aabb.h",
+              "RelativeToolTip": "PathTracer\\aabb.h",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-15T06:54:20.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "camera.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\camera.h",
               "RelativeDocumentMoniker": "PathTracer\\camera.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\camera.h",
               "RelativeToolTip": "PathTracer\\camera.h",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAowEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-13T09:54:17.534Z",
               "EditorCaption": ""
@@ -109,57 +154,59 @@
               "RelativeDocumentMoniker": "PathTracer\\rtweekend.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\rtweekend.h",
               "RelativeToolTip": "PathTracer\\rtweekend.h",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowCUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-13T05:57:28.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "dielectric.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\dielectric.h",
               "RelativeDocumentMoniker": "PathTracer\\dielectric.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\dielectric.h",
               "RelativeToolTip": "PathTracer\\dielectric.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowDwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-13T05:37:39.359Z"
+              "WhenOpened": "2026-03-13T05:37:39.359Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "metal.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\metal.h",
               "RelativeDocumentMoniker": "PathTracer\\metal.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\metal.h",
               "RelativeToolTip": "PathTracer\\metal.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-13T03:14:52.567Z"
+              "WhenOpened": "2026-03-13T03:14:52.567Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "hittable_list.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\hittable_list.h",
               "RelativeDocumentMoniker": "PathTracer\\hittable_list.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\hittable_list.h",
               "RelativeToolTip": "PathTracer\\hittable_list.h",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwAoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-12T14:58:27.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "hittable.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\hittable.h",
               "RelativeDocumentMoniker": "PathTracer\\hittable.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\hittable.h",
               "RelativeToolTip": "PathTracer\\hittable.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowCAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-12T14:57:41.24Z",
               "EditorCaption": ""
@@ -172,51 +219,53 @@
               "RelativeDocumentMoniker": "PathTracer\\sphere.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\sphere.h",
               "RelativeToolTip": "PathTracer\\sphere.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-12T14:45:06.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "lambertian.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\lambertian.h",
               "RelativeDocumentMoniker": "PathTracer\\lambertian.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\lambertian.h",
               "RelativeToolTip": "PathTracer\\lambertian.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-12T14:44:35.62Z"
+              "WhenOpened": "2026-03-12T14:44:35.62Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "material.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\material.h",
               "RelativeDocumentMoniker": "PathTracer\\material.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\material.h",
               "RelativeToolTip": "PathTracer\\material.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-12T14:43:33.378Z"
+              "WhenOpened": "2026-03-12T14:43:33.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\main.cpp",
               "RelativeDocumentMoniker": "PathTracer\\main.cpp",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\main.cpp",
               "RelativeToolTip": "PathTracer\\main.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAowLkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-12T13:24:47.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "color.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\color.h",
               "RelativeDocumentMoniker": "PathTracer\\color.h",
@@ -224,31 +273,21 @@
               "RelativeToolTip": "PathTracer\\color.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-12T13:24:37.527Z"
+              "WhenOpened": "2026-03-12T13:24:37.527Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ray.h",
-              "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\ray.h",
-              "RelativeDocumentMoniker": "PathTracer\\ray.h",
-              "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\ray.h",
-              "RelativeToolTip": "PathTracer\\ray.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-12T13:23:16.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "vec3.h",
               "DocumentMoniker": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\vec3.h",
               "RelativeDocumentMoniker": "PathTracer\\vec3.h",
               "ToolTip": "D:\\Games101\\RayTracing\\PathTracer\\PathTracer\\vec3.h",
               "RelativeToolTip": "PathTracer\\vec3.h",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAIwKkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAqwKwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-12T13:23:00.143Z"
+              "WhenOpened": "2026-03-12T13:23:00.143Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,5 +1,6 @@
 #pragma once
 #include "hittable.h"
+#include "aabb.h"
 #include <memory>
 
 class sphere : public hittable
@@ -57,6 +58,16 @@ public:
         rec.set_face_normal(r, outward_normal);
 
         rec.mat_ptr = mat_ptr;
+
+        return true;
+    }
+
+    virtual bool bounding_box(aabb& output_box) const override
+    {
+        output_box = aabb(
+            center - vec3(radius, radius, radius),
+            center + vec3(radius, radius, radius)
+        );
 
         return true;
     }

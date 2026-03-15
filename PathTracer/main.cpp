@@ -11,6 +11,8 @@
 #include "metal.h"
 #include "dielectric.h"
 #include "camera.h"
+#include "aabb.h"
+#include "bvh.h"
 
 vec3 ray_color(const ray& r, const hittable& world, int depth)
 {
@@ -140,6 +142,7 @@ int main()
     dielectric glass(1.5);
 
     auto world = random_scene();
+    bvh_node bvh(world.objects, 0, world.objects.size());
 
     // Camera
     vec3 lookfrom(13, 2, 3);
@@ -173,7 +176,7 @@ int main()
 
                 ray r = cam.get_ray(u, v);
 
-                pixel_color += ray_color(r, world, max_depth);
+                pixel_color += ray_color(r, bvh, max_depth);
             }
 
             write_color(out, pixel_color, samples_per_pixel);
