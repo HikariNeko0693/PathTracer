@@ -8,8 +8,7 @@
 class hittable_list : public hittable
 {
 public:
-
-    std::vector<std::shared_ptr<hittable>> objects;
+    std::vector<std::shared_ptr<hittable>> objects;  // 场景中的所有可求交对象
 
     hittable_list() {}
 
@@ -33,10 +32,12 @@ public:
         hit_record temp_rec;
         bool hit_anything = false;
 
+        // 当前找到的最近合法交点
         auto closest_so_far = t_max;
 
         for (const auto& object : objects)
         {
+            // 传入 closest_so_far，一旦找到更近的交点，后面更远的交点就会自动被过滤掉
             if (object->hit(r, t_min, closest_so_far, temp_rec))
             {
                 hit_anything = true;

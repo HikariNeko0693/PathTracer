@@ -1,3 +1,5 @@
+// png格式输出头文件
+
 #pragma once
 #ifndef INCLUDE_STB_IMAGE_WRITE_H
 #define INCLUDE_STB_IMAGE_WRITE_H

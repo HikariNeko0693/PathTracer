@@ -21,11 +21,12 @@
 
 vec3 ray_color(const ray& r, const hittable& world, int depth)
 {
-    if (depth <= 0)
+    if (depth <= 0) // 次数耗尽，此时光线贡献为0
         return vec3(0, 0, 0);
 
     hit_record rec;
 
+    // 与场景求交
     if (world.hit(r, 0.001, 1e8, rec))
     {
         ray scattered;
@@ -33,12 +34,14 @@ vec3 ray_color(const ray& r, const hittable& world, int depth)
 
         if (rec.mat_ptr->scatter(r, rec, attenuation, scattered))
         {
+            // 递归追踪下一条光线
             return attenuation * ray_color(scattered, world, depth - 1);
         }
 
         return vec3(0, 0, 0);
     }
 
+    // 未命中，返回线性插值的天空背景
     vec3 unit_direction = unit_vector(r.direction());
     double t = 0.5 * (unit_direction.y() + 1.0);
 
@@ -70,6 +73,7 @@ hittable_list random_scene()
 
                 if (choose_mat < 0.8)
                 {
+                    // 漫反射
                     vec3 albedo = vec3(
                         random_double(),
                         random_double(),
@@ -85,6 +89,7 @@ hittable_list random_scene()
                 }
                 else if (choose_mat < 0.95)
                 {
+                    // 金属
                     vec3 albedo = vec3(
                         random_double() * 0.5 + 0.5,
                         random_double() * 0.5 + 0.5,
@@ -98,6 +103,7 @@ hittable_list random_scene()
                 }
                 else
                 {
+                    // 玻璃
                     sphere_material = std::make_shared<dielectric>(1.5);
                     world.add(std::make_shared<sphere>(center, 0.2, sphere_material));
                 }
@@ -117,6 +123,7 @@ hittable_list random_scene()
     return world;
 }
 
+// 多线程优化
 void render_section(
     int start_y,
     int end_y,
@@ -135,6 +142,7 @@ void render_section(
         {
             vec3 pixel_color(0, 0, 0);
 
+            // 多次采样
             for (int s = 0; s < samples_per_pixel; s++)
             {
                 double u = (i + random_double()) / (image_width - 1);
@@ -157,21 +165,23 @@ int main()
     const int image_height = 225;
     const double aspect_ratio = double(image_width) / image_height;
 
-    const int samples_per_pixel = 100;
-    const int max_depth = 50;
+    const int samples_per_pixel = 100;  // 抗锯齿
+    const int max_depth = 50;   // 递归深度
 
     std::vector<vec3> framebuffer(image_width * image_height);
 
+    // 构建场景（bvh）
     auto world = random_scene();
     bvh_node bvh(world.objects, 0, world.objects.size());
 
+    // 相机
     vec3 lookfrom(13, 2, 3);
     vec3 lookat(0, 0, 0);
     vec3 vup(0, 1, 0);
 
     double vfov = 90;
-    double aperture = 0.1;
-    double focus_dist = 10;
+    double aperture = 0.1;  // 光圈
+    double focus_dist = 10; // 焦距
 
     camera cam(
         vfov,
@@ -183,6 +193,7 @@ int main()
         focus_dist
     );
 
+    // 多线程渲染
     int thread_count = std::thread::hardware_concurrency();
     std::vector<std::thread> threads;
 
@@ -215,6 +226,7 @@ int main()
         th.join();
     }
 
+    // 转换为图像
     std::vector<unsigned char> image(image_width * image_height * 3);
 
     for (int j = 0; j < image_height; j++)
@@ -241,6 +253,7 @@ int main()
         }
     }
 
+    // 输出 png 结果
     stbi_write_png(
         "output/render.png",
         image_width,

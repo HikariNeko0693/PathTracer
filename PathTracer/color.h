@@ -5,8 +5,10 @@
 
 void write_color(std::ostream& out, vec3 pixel_color, int samples_per_pixel)
 {
+    // 多次采样平均
     double scale = 1.0 / samples_per_pixel;
 
+    // gamma 校正
     double r = sqrt(pixel_color.x() * scale);
     double g = sqrt(pixel_color.y() * scale);
     double b = sqrt(pixel_color.z() * scale);

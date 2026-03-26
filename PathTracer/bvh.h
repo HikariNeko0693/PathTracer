@@ -9,10 +9,9 @@
 class bvh_node : public hittable
 {
 public:
-
     std::shared_ptr<hittable> left;
     std::shared_ptr<hittable> right;
-    aabb box;
+    aabb box;   // 总包围盒
 
     bvh_node() {}
 
@@ -22,6 +21,7 @@ public:
         size_t end
     )
     {
+        // 随机选择一个轴作为当前划分依据
         int axis = int(3 * random_double());
 
         auto comparator =
@@ -31,10 +31,13 @@ public:
 
         size_t object_span = end - start;
 
+        // 左右孩子都指向同一个对象
         if (object_span == 1)
         {
             left = right = objects[start];
         }
+
+        // 根据当前轴排序后决定左右
         else if (object_span == 2)
         {
             if (comparator(objects[start], objects[start + 1]))
@@ -50,18 +53,21 @@ public:
         }
         else
         {
+            // 按当前轴对物体排序
             std::sort(
                 objects.begin() + start,
                 objects.begin() + end,
                 comparator
             );
 
+            // 递归构建左右子树
             auto mid = start + object_span / 2;
 
             left = std::make_shared<bvh_node>(objects, start, mid);
             right = std::make_shared<bvh_node>(objects, mid, end);
         }
 
+        // 构建当前节点自己的总包围盒
         aabb box_left, box_right;
 
         left->bounding_box(box_left);
@@ -77,6 +83,7 @@ public:
         hit_record& rec
     ) const override
     {
+        // 总包围盒
         if (!box.hit(r, t_min, t_max))
             return false;
 
@@ -100,6 +107,7 @@ public:
 
 private:
 
+    // 比较两个物体在某个轴上的包围盒最小值，用于排序
     static bool box_compare(
         const std::shared_ptr<hittable> a,
         const std::shared_ptr<hittable> b,
