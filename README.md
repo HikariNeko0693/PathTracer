@@ -1,6 +1,6 @@
 # C++ Ray Tracing Renderer
 
-![08_bvh](D:\Games101\1\PathTracer\image\08_bvh.png)
+![08_bvh](./image/08_bvh.png)
 
 A ray tracing renderer implemented in **C++**. 
 This project covers the core pipeline of a basic path tracer, including ray generation, ray-object intersection, material scattering, recursive color accumulation, depth of field, BVH acceleration, and multithreaded rendering.
@@ -39,31 +39,31 @@ Image output
 
 ### Sphere Intersection
 
-![01_sphere](D:\Games101\1\PathTracer\image\01_sphere.png)
+![01_sphere](./image/01_sphere.png)
 
 ### Diffuse Material
 
-![02_diffuse](D:\Games101\1\PathTracer\image\02_diffuse.png)
+![02_diffuse](./image/02_diffuse.png)
 
 ### Metal Material
 
-![03_metal](D:\Games101\1\PathTracer\image\03_metal.png)
+![03_metal](./image/03_metal.png)
 
 ### Glass Material
 
-![04_glass](D:\Games101\1\PathTracer\image\04_glass.png)
+![04_glass]./image/04_glass.png)
 
 ### Camera System
 
-![05_camera](D:\Games101\1\PathTracer\image\05_camera.png)
+![05_camera](./image/05_camera.png)
 
 ### Depth of Field
 
-![06_depth_of_field](D:\Games101\1\PathTracer\image\06_depth_of_field.png)
+![06_depth_of_field](./image/06_depth_of_field.png)
 
 ### Random Scene
 
-![07_random](D:\Games101\1\PathTracer\image\07_random.png)
+![07_random](./image/07_random.png)
 
 ------
 
