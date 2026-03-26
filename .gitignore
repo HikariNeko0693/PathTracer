@@ -29,7 +29,9 @@ output/
 *.jpg
 *.jpeg
 
-!images/
-!images/*.png
+!image/
+!image/*.png
+!README.md
+!PathTracer.sln
 
 .DS_Store
