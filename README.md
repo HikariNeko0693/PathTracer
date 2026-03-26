@@ -51,7 +51,7 @@ Image output
 
 ### Glass Material
 
-![04_glass]./image/04_glass.png)
+![04_glass](./image/04_glass.png)
 
 ### Camera System
 
