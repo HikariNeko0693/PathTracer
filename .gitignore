@@ -1,31 +1,35 @@
-# Visual Studio
-.vs/
-*.vcxproj.user
-*.suo
-
-# Build folders
 Debug/
 Release/
 x64/
 x86/
 build/
-cmake-build-*/
+out/
 
-# Compiled files
+.vs/
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+*.log
+*.tmp
+*.cache
+
 *.obj
 *.o
-*.exe
-*.dll
 *.pdb
-*.lib
+*.idb
+*.ilk
+*.exe
 
-# Cache
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Output images
-*.ppm
+output/
 *.png
+*.jpg
+*.jpeg
+
+!images/
+!images/*.png
+
+.DS_Store
