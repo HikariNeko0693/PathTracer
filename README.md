@@ -2,7 +2,7 @@
 
 ![08_bvh](D:\Games101\1\PathTracer\image\08_bvh.png)
 
-A ray tracing renderer implemented in **C++**.  
+A ray tracing renderer implemented in **C++**. 
 This project covers the core pipeline of a basic path tracer, including ray generation, ray-object intersection, material scattering, recursive color accumulation, depth of field, BVH acceleration, and multithreaded rendering.
 
 ---
