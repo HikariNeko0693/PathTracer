@@ -1,6 +1,6 @@
-#pragma once
+ï»¿#pragma once
 #include <cmath>
-#include <cstdlib>
+#include <random>
 
 class vec3 {
 public:
@@ -13,16 +13,16 @@ public:
     double y() const { return e[1]; }
     double z() const { return e[2]; }
 
-    // È¡·´
+    // å–å
     vec3 operator-() const {
         return vec3(-e[0], -e[1], -e[2]);
     }
 
-    // ÏÂ±ê·ÃÎÊ
+    // ä¸‹æ ‡è®¿é—®
     double operator[](int i) const { return e[i]; }
     double& operator[](int i) { return e[i]; }
 
-    // ÏòÁ¿¼Ó·¨¸³Öµ
+    // å‘é‡åŠ æ³•èµ‹å€¼
     vec3& operator+=(const vec3& v) {
         e[0] += v.e[0];
         e[1] += v.e[1];
@@ -30,7 +30,7 @@ public:
         return *this;
     }
 
-    // ±êÁ¿³Ë·¨¸³Öµ
+    // æ ‡é‡ä¹˜æ³•èµ‹å€¼
     vec3& operator*=(double t) {
         e[0] *= t;
         e[1] *= t;
@@ -38,22 +38,22 @@ public:
         return *this;
     }
 
-    // ±êÁ¿³ı·¨¸³Öµ
+    // æ ‡é‡é™¤æ³•èµ‹å€¼
     vec3& operator/=(double t) {
         return *this *= 1.0 / t;
     }
 
-    // ÏòÁ¿³¤¶È
+    // å‘é‡é•¿åº¦
     double length() const {
         return std::sqrt(length_squared());
     }
 
-    // ÏòÁ¿³¤¶ÈÆ½·½
+    // å‘é‡é•¿åº¦å¹³æ–¹
     double length_squared() const {
         return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
     }
 
-    // ÅĞ¶ÏÊÇ·ñ½Ó½üÁãÏòÁ¿
+    // åˆ¤æ–­æ˜¯å¦æ¥è¿‘é›¶å‘é‡
     bool near_zero() const {
         const double s = 1e-8;
         return (fabs(e[0]) < s) && (fabs(e[1]) < s) && (fabs(e[2]) < s);
@@ -61,7 +61,7 @@ public:
 };
 
 
-// ÏòÁ¿¼Ó·¨
+// å‘é‡åŠ æ³•
 inline vec3 operator+(const vec3& u, const vec3& v) {
     return vec3(
         u.e[0] + v.e[0],
@@ -70,7 +70,7 @@ inline vec3 operator+(const vec3& u, const vec3& v) {
     );
 }
 
-// ÏòÁ¿¼õ·¨
+// å‘é‡å‡æ³•
 inline vec3 operator-(const vec3& u, const vec3& v) {
     return vec3(
         u.e[0] - v.e[0],
@@ -79,7 +79,7 @@ inline vec3 operator-(const vec3& u, const vec3& v) {
     );
 }
 
-// ·ÖÁ¿³Ë·¨£¬ÑÕÉ«Ë¥¼õÊ±ÓÃ
+// åˆ†é‡ä¹˜æ³•ï¼Œé¢œè‰²è¡°å‡æ—¶ç”¨
 inline vec3 operator*(const vec3& u, const vec3& v) {
     return vec3(
         u.e[0] * v.e[0],
@@ -88,7 +88,7 @@ inline vec3 operator*(const vec3& u, const vec3& v) {
     );
 }
 
-// ±êÁ¿ * ÏòÁ¿
+// æ ‡é‡ * å‘é‡
 inline vec3 operator*(double t, const vec3& v) {
     return vec3(
         t * v.e[0],
@@ -97,25 +97,25 @@ inline vec3 operator*(double t, const vec3& v) {
     );
 }
 
-// ÏòÁ¿ * ±êÁ¿
+// å‘é‡ * æ ‡é‡
 inline vec3 operator*(const vec3& v, double t) {
     return t * v;
 }
 
-// ÏòÁ¿ / ±êÁ¿
+// å‘é‡ / æ ‡é‡
 inline vec3 operator/(vec3 v, double t) {
     return (1 / t) * v;
 }
 
 
-// µã»ı
+// ç‚¹ç§¯
 inline double dot(const vec3& u, const vec3& v) {
     return u.e[0] * v.e[0]
         + u.e[1] * v.e[1]
         + u.e[2] * v.e[2];
 }
 
-// ²æ»ı£¨¹¹½¨Õı½»×ø±êÏµ£©
+// å‰ç§¯ï¼ˆæ„å»ºæ­£äº¤åæ ‡ç³»ï¼‰
 inline vec3 cross(const vec3& u, const vec3& v) {
     return vec3(
         u.e[1] * v.e[2] - u.e[2] * v.e[1],
@@ -124,29 +124,41 @@ inline vec3 cross(const vec3& u, const vec3& v) {
     );
 }
 
-// ¹éÒ»»¯
+// å½’ä¸€åŒ–
 inline vec3 unit_vector(vec3 v) {
     return v / v.length();
 }
 
 
-// Éú³É [0,1) Ëæ»úÊı
-inline double random_double() {
-    return rand() / (RAND_MAX + 1.0);
+inline std::mt19937& random_generator()
+{
+    static thread_local std::mt19937 generator(1234);
+    return generator;
 }
 
-// Éú³É [min,max) Ëæ»úÊı
+inline void set_random_seed(unsigned int seed)
+{
+    random_generator().seed(seed);
+}
+
+// ç”Ÿæˆ [0,1) éšæœºæ•°
+inline double random_double() {
+    static thread_local std::uniform_real_distribution<double> distribution(0.0, 1.0);
+    return distribution(random_generator());
+}
+
+// ç”Ÿæˆ [min,max) éšæœºæ•°
 inline double random_double(double min, double max) {
     return min + (max - min) * random_double();
 }
 
 
-// Ã¿¸ö·ÖÁ¿¶¼ÔÚ [0,1) ·¶Î§ÄÚ
+// æ¯ä¸ªåˆ†é‡éƒ½åœ¨ [0,1) èŒƒå›´å†…
 inline vec3 random_vec3() {
     return vec3(random_double(), random_double(), random_double());
 }
 
-// Ã¿¸ö·ÖÁ¿¶¼ÔÚ [min,max) ·¶Î§ÄÚ
+// æ¯ä¸ªåˆ†é‡éƒ½åœ¨ [min,max) èŒƒå›´å†…
 inline vec3 random_vec3(double min, double max) {
     return vec3(
         random_double(min, max),
@@ -155,47 +167,47 @@ inline vec3 random_vec3(double min, double max) {
     );
 }
 
-// ÔÚµ¥Î»ÇòÄÚËæ»ú²ÉÑùÒ»¸öµã£¨Âş·´Éä²ÉÑù£©
+// åœ¨å•ä½çƒå†…éšæœºé‡‡æ ·ä¸€ä¸ªç‚¹ï¼ˆæ¼«åå°„é‡‡æ ·ï¼‰
 inline vec3 random_in_unit_sphere() {
     while (true) {
         vec3 p = random_vec3(-1, 1);
 
-        // Èç¹ûÂäÔÚµ¥Î»ÇòÍâ£¬¾ÍÖØ²ÉÑù
+        // å¦‚æœè½åœ¨å•ä½çƒå¤–ï¼Œå°±é‡é‡‡æ ·
         if (p.length_squared() >= 1) continue;
 
         return p;
     }
 }
 
-// Éú³Éµ¥Î»³¤¶ÈµÄËæ»ú·½ÏòÏòÁ¿
+// ç”Ÿæˆå•ä½é•¿åº¦çš„éšæœºæ–¹å‘å‘é‡
 inline vec3 random_unit_vector() {
     return unit_vector(random_in_unit_sphere());
 }
 
-// ¾µÃæ·´Éä·½Ïò
+// é•œé¢åå°„æ–¹å‘
 inline vec3 reflect(const vec3& v, const vec3& n)
 {
     return v - 2 * dot(v, n) * n;
 }
 
-// ÕÛÉä·½Ïò
-// uv£ºµ¥Î»»¯ºóµÄÈëÉä·½Ïò
-// etai_over_etat£ºÕÛÉäÂÊ±È
+// æŠ˜å°„æ–¹å‘
+// uvï¼šå•ä½åŒ–åçš„å…¥å°„æ–¹å‘
+// etai_over_etatï¼šæŠ˜å°„ç‡æ¯”
 inline vec3 refract(const vec3& uv, const vec3& n, double etai_over_etat)
 {
     double cos_theta = fmin(dot(-uv, n), 1.0);
 
-    // ÕÛÉä·½ÏòÖĞ´¹Ö±ÓÚ·¨ÏßµÄ·ÖÁ¿
+    // æŠ˜å°„æ–¹å‘ä¸­å‚ç›´äºæ³•çº¿çš„åˆ†é‡
     vec3 r_out_perp = etai_over_etat * (uv + cos_theta * n);
 
-    // Æ½ĞĞÓÚ·¨ÏßµÄ·ÖÁ¿
+    // å¹³è¡Œäºæ³•çº¿çš„åˆ†é‡
     vec3 r_out_parallel =
         -sqrt(fabs(1.0 - r_out_perp.length_squared())) * n;
 
     return r_out_perp + r_out_parallel;
 }
 
-// ÔÚµ¥Î»Ô²ÅÌÖĞËæ»ú²ÉÑù£¬ÓÃÓÚÏà»ú¾µÍ·²ÉÑù£¬ÊµÏÖ¾°Éî
+// åœ¨å•ä½åœ†ç›˜ä¸­éšæœºé‡‡æ ·ï¼Œç”¨äºç›¸æœºé•œå¤´é‡‡æ ·ï¼Œå®ç°æ™¯æ·±
 inline vec3 random_in_unit_disk()
 {
     while (true)

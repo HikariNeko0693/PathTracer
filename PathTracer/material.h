@@ -7,7 +7,7 @@ public:
     virtual bool scatter(
         const ray& r_in,    // 入射光线
         const hit_record& rec,  // 交点信息
-        vec3& attenuation,  // 散射后的颜色衰减
+        vec3& attenuation,  // 散射后的颜色衰减，即：当前材质对入射光能量的“反射比例”
         ray& scattered  // 散射后的新光线
     ) const = 0;
 };
